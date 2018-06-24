@@ -210,7 +210,7 @@
 					<right>40</right>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font27</font>
+					<font>font37</font>
 					<label>$VAR[AddonsLabel2Var]</label>
 				</control>
 			</control>
@@ -239,7 +239,7 @@
 					<right>40</right>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font27</font>
+					<font>font37</font>
 					<label>$VAR[AddonsLabel2Var]</label>
 					<textcolor>grey</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>

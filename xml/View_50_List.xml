@@ -86,7 +86,7 @@
 						<height>70</height>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
-						<font>font27</font>
+						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -131,7 +131,7 @@
 						<top>0</top>
 						<height>70</height>
 						<aligny>center</aligny>
-						<font>font27</font>
+						<font>font37</font>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -206,7 +206,7 @@
 						<height>413</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>font27</font>
+						<font>font37</font>
 						<textcolor>80FFFFFF</textcolor>
 						<label>$LOCALIZE[19055]</label>
 						<visible>!ListItem.IsParentFolder</visible>

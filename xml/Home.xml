@@ -134,6 +134,10 @@
 							<param name="sortorder" value="descending"/>
 							<param name="widget_header" value="$LOCALIZE[626]"/>
 							<param name="widget_target" value="videos"/>
+							<param name="left_icon" value="lists/played-total.png" />
+							<param name="right_icon" value="lists/rating.png" />
+							<param name="first_label" value="$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]" />
+							<param name="second_label" value="$INFO[ListItem.Rating]" />
 							<param name="fallback_image" value="DefaultTVShows.png" />
 							<param name="list_id" value="6100"/>
 						</include>
@@ -148,6 +152,10 @@
 							<param name="content_path" value="special://skin/playlists/unwatched_tvshows.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[31122]"/>
 							<param name="widget_target" value="videos"/>
+							<param name="left_icon" value="lists/totaltv.png" />
+							<param name="right_icon" value="lists/rating.png" />
+							<param name="first_label" value="$INFO[ListItem.Property(TotalEpisodes)]" />
+							<param name="second_label" value="$INFO[ListItem.Rating]" />
 							<param name="fallback_image" value="DefaultTVShows.png" />
 							<param name="list_id" value="6300"/>
 						</include>
@@ -169,16 +177,16 @@
 							<param name="icon_height" value="90"/>
 							<param name="visible" value="Library.HasContent(tvshows)"/>
 						</include>
+						<include content="ImageWidget">
+							<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
+							<param name="text_label" value="$LOCALIZE[31104]" />
+							<param name="button_label" value="$LOCALIZE[31110]" />
+							<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
+							<param name="button_id" value="6400"/>
+							<param name="visible" value="!Library.HasContent(tvshows)"/>
+							<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
+						</include>
 					</control>
-					<include content="ImageWidget">
-						<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[31110]" />
-						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-						<param name="button_id" value="6400"/>
-						<param name="visible" value="!Library.HasContent(tvshows)"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
-					</include>
 				</control>
 				<control type="group" id="7000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),music)</visible>
@@ -200,6 +208,7 @@
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7100"/>
 							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+							<param name="main_label" value="$INFO[ListItem.Year,[B],[/B] - ]$INFO[ListItem.Artist]"/>
 						</include>
 						<include content="WidgetListSquare">
 							<param name="content_path" value="musicdb://recentlyaddedalbums/"/>
@@ -207,6 +216,7 @@
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7200"/>
 							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+							<param name="main_label" value="$INFO[ListItem.Year,[B],[/B] - ]$INFO[ListItem.Artist]"/>
 						</include>
 						<include content="WidgetListSquare">
 							<param name="content_path" value="special://skin/playlists/random_albums.xsp"/>
@@ -214,6 +224,7 @@
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7300"/>
 							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+							<param name="main_label" value="$INFO[ListItem.Year,[B],[/B] - ]$INFO[ListItem.Artist]"/>
 						</include>
 						<include content="WidgetListSquare">
 							<param name="content_path" value="special://skin/playlists/random_artists.xsp"/>
@@ -221,6 +232,9 @@
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7400"/>
 							<param name="fallback_icon" value="DefaultMusicArtists.png"/>
+							<param name="single_label" value="$INFO[ListItem.Label]"/>
+							<param name="main_label" value=""/>
+							<param name="sub_label" value=""/>
 						</include>
 						<include content="WidgetListSquare">
 							<param name="content_path" value="special://skin/playlists/unplayed_albums.xsp"/>
@@ -228,6 +242,7 @@
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7500"/>
 							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+							<param name="main_label" value="$INFO[ListItem.Year,[B],[/B] - ]$INFO[ListItem.Artist]"/>
 						</include>
 						<include content="WidgetListSquare">
 							<param name="content_path" value="special://skin/playlists/mostplayed_albums.xsp"/>
@@ -235,19 +250,20 @@
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7600"/>
 							<param name="fallback_icon" value="DefaultMusicAlbums.png"/>
+							<param name="main_label" value="$INFO[ListItem.Year,[B],[/B] - ]$INFO[ListItem.Artist]"/>
 							<param name="sortby" value="playcount"/>
 							<param name="sortorder" value="descending"/>
 						</include>
+						<include content="ImageWidget">
+							<param name="image_path" value="special://skin/extras/home-images/music.jpg"/>
+							<param name="text_label" value="$LOCALIZE[31104]" />
+							<param name="button_label" value="$LOCALIZE[31110]" />
+							<param name="button_onclick" value="ActivateWindow(music,files)"/>
+							<param name="button_id" value="7600"/>
+							<param name="visible" value="!Library.HasContent(music)"/>
+							<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicButton)"/>
+						</include>
 					</control>
-					<include content="ImageWidget">
-						<param name="image_path" value="special://skin/extras/home-images/music.jpg"/>
-						<param name="text_label" value="$LOCALIZE[31104]" />
-						<param name="button_label" value="$LOCALIZE[31110]" />
-						<param name="button_onclick" value="ActivateWindow(music,files)"/>
-						<param name="button_id" value="7600"/>
-						<param name="visible" value="!Library.HasContent(music)"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicButton)"/>
-					</include>
 				</control>
 				<control type="group" id="8000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),addons)</visible>
@@ -271,6 +287,9 @@
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8100"/>
 							<param name="fallback_icon" value="DefaultAddon.png"/>
+							<param name="single_label" value="$INFO[ListItem.Label]"/>
+							<param name="main_label" value=""/>
+							<param name="sub_label" value=""/>
 						</include>
 						<include content="WidgetListSquare">
 							<param name="content_path" value="addons://sources/audio/"/>
@@ -280,6 +299,9 @@
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8200"/>
 							<param name="fallback_icon" value="DefaultAddon.png"/>
+							<param name="single_label" value="$INFO[ListItem.Label]"/>
+							<param name="main_label" value=""/>
+							<param name="sub_label" value=""/>
 						</include>
 						<include content="WidgetListSquare">
 							<param name="content_path" value="addons://sources/executable/"/>
@@ -289,6 +311,9 @@
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8300"/>
 							<param name="fallback_icon" value="DefaultAddon.png"/>
+							<param name="single_label" value="$INFO[ListItem.Label]"/>
+							<param name="main_label" value=""/>
+							<param name="sub_label" value=""/>
 						</include>
 						<include content="WidgetListSquare" condition="System.Platform.Android">
 							<param name="content_path" value="androidapp://sources/apps/"/>
@@ -298,6 +323,9 @@
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8400"/>
 							<param name="fallback_icon" value="DefaultAddon.png"/>
+							<param name="single_label" value="$INFO[ListItem.Label]"/>
+							<param name="main_label" value=""/>
+							<param name="sub_label" value=""/>
 						</include>
 						<include content="WidgetListSquare">
 							<param name="content_path" value="addons://sources/image/"/>
@@ -306,17 +334,20 @@
 							<param name="sortby" value="lastused"/>
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8500"/>
+							<param name="single_label" value="$INFO[ListItem.Label]"/>
+							<param name="main_label" value=""/>
+							<param name="sub_label" value=""/>
+						</include>
+						<include content="ImageWidget">
+							<param name="image_path" value="special://skin/extras/home-images/add-ons.jpg"/>
+							<param name="text_label" value="$LOCALIZE[31119]" />
+							<param name="button_label" value="$LOCALIZE[31118]" />
+							<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
+							<param name="button_id" value="8600"/>
+							<param name="visible" value="!Integer.IsGreater(Container(8100).NumItems,0) + !Integer.IsGreater(Container(8200).NumItems,0) + !Integer.IsGreater(Container(8300).NumItems,0) + !Integer.IsGreater(Container(8400).NumItems,0) + !Integer.IsGreater(Container(8500).NumItems,0)"/>
+							<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoProgramsButton)"/>
 						</include>
 					</control>
-					<include content="ImageWidget">
-						<param name="image_path" value="special://skin/extras/home-images/add-ons.jpg"/>
-						<param name="text_label" value="$LOCALIZE[31119]" />
-						<param name="button_label" value="$LOCALIZE[31118]" />
-						<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
-						<param name="button_id" value="8600"/>
-						<param name="visible" value="!Integer.IsGreater(Container(8100).NumItems,0) + !Integer.IsGreater(Container(8200).NumItems,0) + !Integer.IsGreater(Container(8300).NumItems,0) + !Integer.IsGreater(Container(8400).NumItems,0) + !Integer.IsGreater(Container(8500).NumItems,0)"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoProgramsButton)"/>
-					</include>
 				</control>
 				<control type="group" id="11000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),video)</visible>
@@ -344,16 +375,16 @@
 							<param name="list_id" value="11200"/>
 							<param name="icon" value="DefaultPlaylist.png"/>
 						</include>
+						<include content="ImageWidget">
+							<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
+							<param name="text_label" value="$LOCALIZE[31105]" />
+							<param name="button_label" value="$LOCALIZE[31110]" />
+							<param name="button_onclick" value="ActivateWindow(videos,root)"/>
+							<param name="button_id" value="11300"/>
+							<param name="visible" value="!Control.IsVisible(11100) + !Control.IsVisible(11200) + !Control.IsVisible(11900)"/>
+							<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoVideosButton)"/>
+						</include>
 					</control>
-					<include content="ImageWidget">
-						<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
-						<param name="text_label" value="$LOCALIZE[31105]" />
-						<param name="button_label" value="$LOCALIZE[31110]" />
-						<param name="button_onclick" value="ActivateWindow(videos,root)"/>
-						<param name="button_id" value="11300"/>
-						<param name="visible" value="!Control.IsVisible(11100) + !Control.IsVisible(11200) + !Control.IsVisible(11900)"/>
-						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoVideosButton)"/>
-					</include>
 				</control>
 				<control type="group" id="12000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),livetv)</visible>
@@ -369,9 +400,9 @@
 							<orientation>horizontal</orientation>
 							<visible>PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer</visible>
 							<align>right</align>
-							<width>1280</width>
+							<width>1360</width>
 							<control type="group">
-								<width>620</width>
+								<width>660</width>
 								<visible>PVR.IsRecordingTV</visible>
 								<include content="PVRWidget">
 									<param name="icon" value="$INFO[PVR.TVNowRecordingChannelIcon]" />
@@ -382,7 +413,7 @@
 							</control>
 							<control type="group">
 								<visible>PVR.HasNonRecordingTVTimer</visible>
-								<width>620</width>
+								<width>670</width>
 								<include content="PVRWidget">
 									<param name="icon" value="$INFO[PVR.TVNextRecordingChannelIcon]" />
 									<param name="header" value="$LOCALIZE[19157]" />
@@ -671,6 +702,9 @@
 							<param name="widget_header" value="$LOCALIZE[31013]"/>
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="16200"/>
+							<param name="single_label" value="$INFO[ListItem.Label]"/>
+							<param name="main_label" value=""/>
+							<param name="sub_label" value=""/>
 							<param name="widget_limit" value="10"/>
 						</include>
 						<include content="WidgetListEpisodes">
@@ -834,6 +868,14 @@
 							<thumb>icons/sidemenu/tv.png</thumb>
 							<property name="id">tvshows</property>
 							<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+						</item>
+						<item>
+							<label>Přehrát DVD</label>
+							<onclick>PlayDVD()</onclick>
+							<property name="menu_id">$NUMBER[6000]</property>
+							<thumb>icons/sidemenu/videos.png</thumb>
+							<property name="id">dvd</property>
+							<visible>System.HasMediaDVD</visible>
 						</item>
 						<item>
 							<label>$LOCALIZE[2]</label>

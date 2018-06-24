@@ -5,50 +5,57 @@
 		<font>
 			<name>font10</name>
 			<filename>NotoSans-Regular.ttf</filename>
-			<size>23</size>
+			<size>28</size>
 			<style>lighten</style>
 		</font>
 		<font>
 			<name>font12</name>
 			<filename>NotoSans-Regular.ttf</filename>
-			<size>25</size>
+			<size>37</size>
 			<style>lighten</style>
 		</font>
 		<font>
+			<name>font12g</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>47</size>
+			<style>lighten</style>
+		</font>
+	
+		<font>
 			<name>font13</name>
 			<filename>NotoSans-Regular.ttf</filename>
-			<size>30</size>
+			<size>35</size>
 			<style>lighten</style>
 		</font>
 		<font>
 			<name>font14</name>
 			<filename>NotoSans-Regular.ttf</filename>
-			<size>33</size>
+			<size>37</size>
 			<style>lighten</style>
 		</font>
 		<font>
 			<name>font27</name>
 			<filename>NotoSans-Regular.ttf</filename>
-			<size>27</size>
+			<size>31</size>
 			<style>lighten</style>
 		</font>
 		<font>
 			<name>font27_narrow</name>
 			<filename>NotoSans-Regular.ttf</filename>
-			<size>25</size>
+			<size>29</size>
 			<style>lighten</style>
 			<linespacing>0.8</linespacing>
 		</font>
 		<font>
 			<name>font37</name>
 			<filename>NotoSans-Regular.ttf</filename>
-			<size>37</size>
+			<size>45</size>
 			<style>lighten</style>
 		</font>
 		<font>
 			<name>font45</name>
 			<filename>NotoSans-Regular.ttf</filename>
-			<size>45</size>
+			<size>50</size>
 			<style>lighten</style>
 		</font>
 		<font>
@@ -66,37 +73,37 @@
 		<font>
 			<name>font_flag</name>
 			<filename>NotoSans-Bold.ttf</filename>
-			<size>18</size>
+			<size>23</size>
 		</font>
 		<font>
 			<name>font20_title</name>
 			<filename>NotoSans-Bold.ttf</filename>
-			<size>20</size>
+			<size>25</size>
 		</font>
 		<font>
 			<name>font25_title</name>
 			<filename>NotoSans-Bold.ttf</filename>
-			<size>25</size>
+			<size>28</size>
 		</font>
 		<font>
 			<name>font30_title</name>
 			<filename>NotoSans-Bold.ttf</filename>
-			<size>30</size>
+			<size>32</size>
 		</font>
 		<font>
 			<name>font32_title</name>
 			<filename>NotoSans-Bold.ttf</filename>
-			<size>32</size>
+			<size>35</size>
 		</font>
 		<font>
 			<name>font36_title</name>
 			<filename>NotoSans-Bold.ttf</filename>
-			<size>36</size>
+			<size>63</size>
 		</font>
 		<font>
 			<name>font45_title</name>
 			<filename>NotoSans-Bold.ttf</filename>
-			<size>45</size>
+			<size>48</size>
 		</font>
 		<font>
 			<name>font52_title</name>
@@ -131,6 +138,12 @@
 			<filename>arial.ttf</filename>
 			<size>22</size>
 		</font>
+		<font>
+			<name>font12g</name>
+			<filename>arial.ttf</filename>
+			<size>22</size>
+		</font>
+	
 		<font>
 			<name>font13</name>
 			<filename>arial.ttf</filename>
